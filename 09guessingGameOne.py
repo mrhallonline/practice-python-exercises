@@ -6,15 +6,29 @@
 
 
 import random
+guesses = 0
 computerNumber = random.randint(1, 9)
+def computerChoose():
+    global computerNumber
+    computerNumber = str(random.randint(1, 9))
 
-print (computerNumber)
-userNumber = int(input("guess the number between 1 and 9 "))
-userNumber2 = str(userNumber)
+def gameSetup():
+    global userNumber
+    userNumber = input("Guess a number between 1 and 9. Type exit to quit :")
+    global guesses
+    guesses += 1
+    gamePlay()
 
-if userNumber == computerNumber:
-    print("You have picked the correct number")
-elif userNumber > computerNumber:
-    print(str(userNumber) + " is too large!")
-elif userNumber < computerNumber:
-    print(str(userNumber) + " is too small!")
+def gamePlay():
+    while userNumber != "exit":
+        if int(userNumber) == int(computerNumber):
+            print("You guessed correct in " +str(guesses)+ " guesses")
+            computerChoose()
+            gameSetup()
+        elif int(userNumber) > int(computerNumber):
+            print(userNumber + " is too large!")
+            gameSetup()
+        elif int(userNumber) < int(computerNumber):
+            print(userNumber + " is too small!")
+            gameSetup()
+gameSetup()
