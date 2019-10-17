@@ -7,3 +7,6 @@ Working through practice exercises from [PracticePython.Org](https://www.practic
 3. [List Less Than Ten](https://www.practicepython.org/exercise/2014/02/15/03-list-less-than-ten.html)  
 4. [Divisors](https://www.practicepython.org/exercise/2014/02/26/04-divisors.html)
 5. [List Overlap](https://www.practicepython.org/exercise/2014/03/05/05-list-overlap.html)
+6. String Lists  
+7. List Comprehensions  
+8. Rock Paper Scissors
