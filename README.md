@@ -10,3 +10,5 @@ Working through practice exercises from [PracticePython.Org](https://www.practic
 6. String Lists  
 7. List Comprehensions  
 8. Rock Paper Scissors
+9. Guessing Game One
+10. List Overlap Comprehensions
