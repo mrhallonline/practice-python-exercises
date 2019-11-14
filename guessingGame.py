@@ -18,44 +18,70 @@ def chooseNumber():
     playerGuess= int(input("Choose a number."))
     
 def playRound():
+    
+    guesses=[]
     round = 1
     playerGuess= int(input("Choose a number."))
+    guesses.append(playerGuess)
     while (playerGuess != rightNumber):
         if (playerGuess < 1 or playerGuess > 100):
             print("Out of Bounds!")
             print(playerGuess)
             print(rightNumber)
-            round += 1
+            print(round)
             playerGuess= int(input("Choose a number."))
         elif (round ==1 and playerGuess in range(rightNumber-10,rightNumber+10) ):
             print("WARM!")
+            print(guesses)
             print(playerGuess)
             print(rightNumber)
+            print(round)
             round += 1
             playerGuess= int(input("Choose a number."))
+            guesses.append(playerGuess)
         elif (round == 1 and playerGuess < rightNumber-10 or playerGuess > rightNumber+10):
             print("Cold!")
+            print(guesses)
+            print(rightNumber)
+            print(round)
             round += 1
             playerGuess= int(input("Choose a number."))
-        elif (round>1):
-            priorRoundGuess=playerGuess
+            guesses.append(playerGuess)
+        elif (round>1): 
+            priorRoundGuess=guesses[-2]
             priorGuessDifference = abs(rightNumber-priorRoundGuess)
             currentGuessDifference= abs(rightNumber-playerGuess)
             if (currentGuessDifference< priorGuessDifference):        
                 print("warmer")
+                print(guesses)
                 print(priorRoundGuess)
                 print(playerGuess)
                 print(rightNumber)
+                print(round)
                 round += 1
                 playerGuess= int(input("Choose a number."))
-            elif (currentGuessDifference> priorGuessDifference):
-                round += 1
+                guesses.append(playerGuess)
+            elif (currentGuessDifference> priorGuessDifference): 
                 print("colder")
+                print(guesses)
                 print(priorRoundGuess)
                 print(playerGuess)
                 print(rightNumber)
+                print(round)
+                round += 1
                 playerGuess= int(input("Choose a number."))
-    print("You guessed the correct answer" + " in " + round + " turns!" )
+                guesses.append(playerGuess)
+            elif (currentGuessDifference== priorGuessDifference): 
+                print("neither hotter or colder")
+                print(guesses)
+                print(priorRoundGuess)
+                print(playerGuess)
+                print(rightNumber)
+                print(round)
+                round += 1
+                playerGuess= int(input("Choose a number."))
+                guesses.append(playerGuess)
+    print("You guessed the correct answer" + " in " + str(round) + " turns!" )
          
 rightNumber = random.randint(1, 100)
 playRound()
