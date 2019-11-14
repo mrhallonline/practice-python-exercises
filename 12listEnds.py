@@ -6,7 +6,10 @@
 # Functions
 
 originalList = [5, 10, 15, 20, 25]
+testList = [2, 4, 6, 8, 10, 12]
 
-def listEnds(firstList, endsList)
-endsList = [firstList[0], firstList[-1]]
-print (endsList)
+def listEnds(firstList):
+        endsList = [firstList[0], firstList[-1]]
+        print (endsList)
+        
+listEnds(testList)
