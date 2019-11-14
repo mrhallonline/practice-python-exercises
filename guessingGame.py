@@ -13,12 +13,12 @@
 
 
 import random
-# playerGuess = 0
-round = 1
+
 def chooseNumber():
     playerGuess= int(input("Choose a number."))
     
 def playRound():
+    round = 1
     playerGuess= int(input("Choose a number."))
     while (playerGuess != rightNumber):
         if (playerGuess < 1 or playerGuess > 100):
@@ -31,16 +31,31 @@ def playRound():
             print("WARM!")
             print(playerGuess)
             print(rightNumber)
+            round += 1
             playerGuess= int(input("Choose a number."))
         elif (round == 1 and playerGuess < rightNumber-10 or playerGuess > rightNumber+10):
             print("Cold!")
+            round += 1
             playerGuess= int(input("Choose a number."))
-        else:
-            print("wrong")
-            print(playerGuess)
-            print(rightNumber)
-            playerGuess= int(input("Choose a number."))
-    print("You got the right answer!")
+        elif (round>1):
+            priorRoundGuess=playerGuess
+            priorGuessDifference = abs(rightNumber-priorRoundGuess)
+            currentGuessDifference= abs(rightNumber-playerGuess)
+            if (currentGuessDifference< priorGuessDifference):        
+                print("warmer")
+                print(priorRoundGuess)
+                print(playerGuess)
+                print(rightNumber)
+                round += 1
+                playerGuess= int(input("Choose a number."))
+            elif (currentGuessDifference> priorGuessDifference):
+                round += 1
+                print("colder")
+                print(priorRoundGuess)
+                print(playerGuess)
+                print(rightNumber)
+                playerGuess= int(input("Choose a number."))
+    print("You guessed the correct answer" + " in " + round + " turns!" )
          
 rightNumber = random.randint(1, 100)
 playRound()
