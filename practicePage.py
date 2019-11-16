@@ -29,11 +29,44 @@
 # animal_crackers('Levelheaded Llama') --> True
 # animal_crackers('Crazy Kangaroo') --> False
 
-def animal_crackers(text):
-    splitString = text.split()
-    if (splitString[0][0]==splitString[1][0]):
-        return True
-    else:
-        return False
+# def animal_crackers(text):
+#     splitString = text.split()
+#     if (splitString[0][0]==splitString[1][0]):
+#         return True
+#     else:
+#         return False
     
-animal_crackers('Levelheaded Llama')
+# animal_crackers('Levelheaded Llama')
+
+# MAKES TWENTY: Given two integers, return True if the sum of the integers is 20 or if one of the integers is 20. If not, return False
+# makes_twenty(20,10) --> True
+# makes_twenty(12,8) --> True
+# makes_twenty(2,3) --> False
+
+# def makes_twenty(n1,n2):
+#     if (n1==20 or n2==20 or (n1+n2)==20):
+#         return True
+#     else:
+#         return False
+
+
+# OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
+# old_macdonald('macdonald') --> MacDonald
+# Note: 'macdonald'.capitalize() returns 'Macdonald'
+
+# x = ('apple')
+# y = enumerate(x)
+
+# return (list(y))
+
+def old_macdonald(name):
+    newString =''
+    for x, c in enumerate(name):
+        if (x==0):
+            newString += c.upper()
+        elif (x==3):
+            newString += c.upper()
+        elif (x!=0 or x!=3):
+            newString += c
+    return(newString)
+old_macdonald('macdonald')
