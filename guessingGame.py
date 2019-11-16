@@ -26,14 +26,14 @@ def playRound():
         elif (round ==1 and playerGuess in range(rightNumber-10,rightNumber+10) ):
             print("WARM!")
             print(guesses)
-            round += 1
             playerGuess= int(input("Choose a number."))
+            round += 1
             guesses.append(playerGuess)
         elif (round == 1 and playerGuess < rightNumber-10 or playerGuess > rightNumber+10):
             print("Cold!")
             print(guesses)
-            round += 1
             playerGuess= int(input("Choose a number."))
+            round += 1
             guesses.append(playerGuess)
         elif (round>1): 
             priorRoundGuess=guesses[-2]
