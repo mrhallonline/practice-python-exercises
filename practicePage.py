@@ -165,24 +165,38 @@
 #     else:
 #         return False 
     
-FIND 33:
-Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+# FIND 33:
+# Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
 
-has_33([1, 3, 3]) → True
-has_33([1, 3, 1, 3]) → False
-has_33([3, 1, 3]) → False
+# has_33([1, 3, 3]) → True
+# has_33([1, 3, 1, 3]) → False
+# has_33([3, 1, 3]) → False
 
-def has_33(nums):
-    for index in range (len(nums)-1):
-        if (nums[index] == nums[index+1]):
-           return True 
-        else:
-            return False
+# def has_33(nums):
+#     for index in range (len(nums)-1):
+#         if (nums[index] == nums[index+1]):
+#            return True 
+#         else:
+#             return False
 
-def has_33(nums):
-     for i in range (len(nums)-1):
-        if (nums[i] == 3 and nums[i+1]==3 ):
-            signal=True
-        else:
-            signal=False
-     return signal
+# def has_33(nums):
+#      for i in range (len(nums)-1):
+#         if (nums[i] == 3 and nums[i+1]==3 ):
+#             signal=True
+#         else:
+#             signal=False
+#      return signal
+
+
+
+# PAPER DOLL: Given a string, return a string where for every character in the original there are three characters
+# paper_doll('Hello') --> 'HHHeeellllllooo'
+# paper_doll('Mississippi') --> 'MMMiiissssssiiippppppiii'
+
+# def paper_doll(text):
+#     tripleWord=""
+#     for letter in range(len(text)):
+#         tripleWord = (text[letter]*3)
+#     print(tripleWord)
+
+# paper_doll('Hello')
