@@ -234,10 +234,33 @@
 #     else:
 #         return ("Bust")
 
-SUMMER OF '69: Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for no numbers.
-summer_69([1, 3, 5]) --> 9
-summer_69([4, 5, 6, 7, 8, 9]) --> 9
-summer_69([2, 1, 6, 9, 11]) --> 14
+# SUMMER OF '69: Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for no numbers.
+# summer_69([1, 3, 5]) --> 9
+# summer_69([4, 5, 6, 7, 8, 9]) --> 9
+# summer_69([2, 1, 6, 9, 11]) --> 14
+
+# def summer_69(arr):
+#     sumList = sum(arr)
+#     sixExist = False
+#     sixCount = arr.count(6)
+#     if sumList = 0
+#     if (sixCount>0):
+#         sixIndex = arr.index(6)
+#         nineIndex = arr.index(9)
+#         del arr[sixIndex:nineIndex+1]
+#     sumList = sum(arr)
+#     return sumList
+# summer_69([4, 5, 6, 7, 8, 9])
 
 def summer_69(arr):
-    pass
+    sumList = sum(arr)
+    sixCount = arr.count(6)
+    if (sumList == 0):
+        return 0
+    if (sixCount>0):
+        sixIndex = arr.index(6)
+        nineIndex = arr.index(9)
+        del arr[sixIndex:nineIndex+1]
+    sumList = sum(arr)
+    return sumList
+summer_69([4, 5, 6, 7, 8, 9])  
