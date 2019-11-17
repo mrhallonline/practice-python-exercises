@@ -59,14 +59,97 @@
 
 # return (list(y))
 
-def old_macdonald(name):
-    newString =''
-    for x, c in enumerate(name):
-        if (x==0):
-            newString += c.upper()
-        elif (x==3):
-            newString += c.upper()
-        elif (x!=0 or x!=3):
-            newString += c
-    return(newString)
-old_macdonald('macdonald')
+# def old_macdonald(name):
+#     newString =''
+#     for x, c in enumerate(name):
+#         if (x==0):
+#             newString += c.upper()
+#         elif (x==3):
+#             newString += c.upper()
+#         elif (x!=0 or x!=3):
+#             newString += c
+#     return(newString)
+# old_macdonald('macdonald')
+
+
+# MASTER YODA: Given a sentence, return a sentence with the words reversed
+# master_yoda('I am home') --> 'home am I'
+# master_yoda('We are ready') --> 'ready are We'
+# Note: The .join() method may be useful here. The .join() method allows you to join together strings in a list with some connector string. For example, some uses of the .join() method:
+
+# >>> "--".join(['a','b','c'])
+# >>> 'a--b--c'
+# This means if you had a list of words you wanted to turn back into a sentence, you could just join them with a single space string:
+
+# >>> " ".join(['Hello','world'])
+# >>> "Hello world"
+
+# def masteryoda(text):
+#     newSentence = []
+#     text.split()
+#     for x, c in enumerate(text):
+#         if x == -1:
+#             newSentence.insert(0, c)
+#         elif x == 0:
+#             newSentence.insert(-1, c)
+#         else:
+#             newSentence.insert(1, c)
+#     newerSentence = newSentence.join()
+#     print(newerSentence)
+
+# masteryoda('yesterday is today')
+
+
+# def masteryoda(text):
+#     newerSentence = []
+#     newSentence = text.split()
+#     newerSentence.insert(0, newSentence[-1])
+#     newerSentence.insert(-1, newSentence[0])
+    
+#     print(newerSentence)
+
+# masteryoda('yesterday is today')
+
+
+# def masteryoda(text):
+#     newerSentence = []
+#     newSentence = text.split()
+#     newSentence.append(newSentence[0])
+#     print(newSentence)
+#     newSentence[0]=newSentence[-2]
+#     print(newSentence)
+#     newSentence[-2]=newSentence[-1]
+#     print(newSentence)
+#     newSentence.pop()
+#     print(newSentence)
+# masteryoda('yesterday is today')
+
+
+# def masteryoda(text):
+#     newSentence = text.split()
+#     newSentence.append(newSentence[0])
+#     newSentence[0]=newSentence[-2]
+#     newSentence[-2]=newSentence[-1]
+#     newSentence.pop()
+# masteryoda('yesterday is today')
+
+
+# def masteryoda(text):
+#     text = text.split()
+#     text.append(text[0])
+#     text[0]=text[-2]
+#     text[-2]=text[-1]
+#     text.pop()
+#     newSentence = " ".join(text)
+# masteryoda('yesterday is today')
+
+
+ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
+almost_there(90) --> True
+almost_there(104) --> True
+almost_there(150) --> False
+almost_there(209) --> True
+NOTE: abs(num) returns the absolute value of a number
+
+def almost_there(n):
+    pass
