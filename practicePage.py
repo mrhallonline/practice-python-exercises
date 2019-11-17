@@ -144,12 +144,45 @@
 # masteryoda('yesterday is today')
 
 
-ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
-almost_there(90) --> True
-almost_there(104) --> True
-almost_there(150) --> False
-almost_there(209) --> True
-NOTE: abs(num) returns the absolute value of a number
+# ALMOST THERE: Given an integer n, return True if n is within 10 of either 100 or 200
+# almost_there(90) --> True
+# almost_there(104) --> True
+# almost_there(150) --> False
+# almost_there(209) --> True
+# NOTE: abs(num) returns the absolute value of a number
 
-def almost_there(n):
-    pass
+# def almost_there(n):
+#     if (n in range(90,110)):
+#         return True
+#     elif (n in range(190, 210)):
+#         return True
+#     else:
+#         return False
+    
+# def almost_there(n):
+#     if (abs(100 -n) < 10) or (abs(200-n)<10):
+#         return True
+#     else:
+#         return False 
+    
+FIND 33:
+Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+
+has_33([1, 3, 3]) → True
+has_33([1, 3, 1, 3]) → False
+has_33([3, 1, 3]) → False
+
+def has_33(nums):
+    for index in range (len(nums)-1):
+        if (nums[index] == nums[index+1]):
+           return True 
+        else:
+            return False
+
+def has_33(nums):
+     for i in range (len(nums)-1):
+        if (nums[i] == 3 and nums[i+1]==3 ):
+            signal=True
+        else:
+            signal=False
+     return signal
