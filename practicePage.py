@@ -252,15 +252,37 @@
 #     return sumList
 # summer_69([4, 5, 6, 7, 8, 9])
 
-def summer_69(arr):
-    sumList = sum(arr)
-    sixCount = arr.count(6)
-    if (sumList == 0):
-        return 0
-    if (sixCount>0):
-        sixIndex = arr.index(6)
-        nineIndex = arr.index(9)
-        del arr[sixIndex:nineIndex+1]
-    sumList = sum(arr)
-    return sumList
-summer_69([4, 5, 6, 7, 8, 9])  
+# def summer_69(arr):
+#     sumList = sum(arr)
+#     sixCount = arr.count(6)
+#     if (sumList == 0):
+#         return 0
+#     if (sixCount>0):
+#         sixIndex = arr.index(6)
+#         nineIndex = arr.index(9)
+#         del arr[sixIndex:nineIndex+1]
+#     sumList = sum(arr)
+#     return sumList
+# summer_69([4, 5, 6, 7, 8, 9])  
+
+# SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
+#  spy_game([1,2,4,0,0,7,5]) --> True
+#  spy_game([1,0,2,4,0,5,7]) --> True
+#  spy_game([1,7,2,0,4,5,0]) --> False
+ 
+# def spy_game(nums):
+#     spyList=[]
+#     for num in nums:
+#         if (num ==0):
+#            spyList.append(num)
+#         if (num ==7):
+#            spyList.append(num)
+#     print(spyList) 
+# spy_game([1,7,2,0,4,5,0]) 
+
+COUNT PRIMES: Write a function that returns the number of prime numbers that exist up to and including a given number
+count_primes(100) --> 25
+By convention, 0 and 1 are not prime.
+
+def count_primes(num):
+    pass
