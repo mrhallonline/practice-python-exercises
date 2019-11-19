@@ -284,7 +284,10 @@
 # count_primes(100) --> 25
 # By convention, 0 and 1 are not prime.
 
-def count_primes(num):
-    for i in range(2,num):
-        if (num%i):
+# def count_primes(num):
+#     for i in range(2,num):
+#         if (num%i):
             
+            
+
+
