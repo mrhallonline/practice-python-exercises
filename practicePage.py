@@ -280,9 +280,11 @@
 #     print(spyList) 
 # spy_game([1,7,2,0,4,5,0]) 
 
-COUNT PRIMES: Write a function that returns the number of prime numbers that exist up to and including a given number
-count_primes(100) --> 25
-By convention, 0 and 1 are not prime.
+# COUNT PRIMES: Write a function that returns the number of prime numbers that exist up to and including a given number
+# count_primes(100) --> 25
+# By convention, 0 and 1 are not prime.
 
 def count_primes(num):
-    pass
+    for i in range(2,num):
+        if (num%i):
+            
