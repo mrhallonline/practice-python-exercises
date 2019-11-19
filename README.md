@@ -12,3 +12,7 @@ Working through practice exercises from [PracticePython.Org](https://www.practic
 8. Rock Paper Scissors
 9. Guessing Game One
 10. List Overlap Comprehensions
+11. Check Primality Function
+12. List Ends
+13. Fibonacci
+14. List Remove Duplicates
