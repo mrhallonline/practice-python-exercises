@@ -6,28 +6,20 @@
 
 import random
 
-symbolsList = ['`', '!', '?', '$', '?', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', ':', ';', '@', '~', '#', '|', '\\', '<', ',', '>', '.', '?', '/']
+symbolsList = [ '!', '?', '$', '?', '%', '&', '*', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', ':', ';', '@', '~', '#', '|', '<', ',', '>', '.', '?', '/']
 alphaList = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm']
-numberList = []
 
 def password_generator(number_of_digits):
+    number_of_digits = int(input("How many characters do you want in the password?: "))
     new_password=[]
-    character_list= [symbolsList,alphaList,numberList]
     for i in range (number_of_digits):
-           random_character = random.choice(alphaList)
-           new_password.append(random_character)
-           joined_password="".join(new_password)
-    print(joined_password)
-
-
-password_generator(20)
-
-
-
-
-def list_maker (rawList):
-    rawList.replace(" ","")
-    newList= rawList.split()
-    print(newList)
+           selector_seed = random.randint(0,6)
+           numberList = random.randint(0,9)
+           symbols = random.choice(symbolsList)
+           alpha = random.choice(alphaList)
+           random_character = (alpha, alpha, alpha, alpha, symbols , alpha , numberList)
+           new_password.append(random_character[selector_seed])
+    new_password = ''.join([str(char) for char in new_password])
+    print(new_password)
     
-list_maker(symbolsList)
+password_generator(25)
