@@ -290,4 +290,8 @@
             
             
 
-
+alphaString = ("QWERTYUIOPASDFGHJKLZXCVBNM")
+alphaList =[]
+for char in alphaString:
+    alphaList.append(char)
+print(alphaList)
