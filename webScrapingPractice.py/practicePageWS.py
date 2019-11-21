@@ -1,26 +1,18 @@
-# scrape Title,description, and link
-# header(class=entry-header),h2,a,text
-# description(div, class=entry-content),p
-
 from bs4 import BeautifulSoup
 import requests
 
 source = requests.get('http://coreyms.com').text
-
 soup = BeautifulSoup(source, 'lxml' )
-#to find title
-header = soup.find('header', class_='entry-header')
-title = header.h2.a.text
-#to find description
-div = soup.find('div', class_='entry-content')
-descrip = div.p.text 
-#to find link to video
-divlink = soup.find('div', class_='wp-block-embed_wrapper')
-figure = soup.find('figure', class_='wp-block-embed')
-link = figure.div.text
 
-# description =
+for article in soup.find_all('article', class_='type-post'):
+    title = article.header.h2.a.text
+    print(title)
+    
+    descrip = article.div.p.text 
+    print(descrip)
+    
+    divlink = article.find('div').text
+    print(divlink)
 
-print(title)
-print(descrip)
-print(link)
+
+
