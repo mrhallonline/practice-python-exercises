@@ -12,3 +12,27 @@
 #   1 cow, 1 bull
 #   ...
 # Until the user guesses the number.
+import random
+
+
+def gen_four_digits():
+    new_num=[]
+    a = random.randint(0,9)
+    b = random.randint(0,9)
+    c = random.randint(0,9)
+    d = random.randint(0,9)
+    rand_digit = (a,b,c,d)
+    rand_number = int("".join(map(str, rand_digit)))
+    return rand_number
+
+def cows_and_bulls(num):
+    cows=0
+    bulls=[]
+    user_number = str(input("Enter a 4 digit number"))
+    for i in num:
+        if (num[i] == user_number[i]):
+            cows+= 1
+    print(cows)
+
+num = gen_four_digits()
+cows_and_bulls(num)

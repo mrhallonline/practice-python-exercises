@@ -26,5 +26,6 @@
         "there",
         "three",
         "where"
-    ]
+    ],
+    "python.formatting.provider": "black"
 }

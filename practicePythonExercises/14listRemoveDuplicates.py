@@ -19,5 +19,3 @@ def remove_duplicates2(firstList):
 
 names = ["Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara","Michele","Robin","Sara",]
 remove_duplicates2(names)
-
-    
